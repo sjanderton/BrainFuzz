@@ -1,13 +1,13 @@
 # BrainFuzz
-An extention to the brainf*** language.
+An extention to the brainfuck language.
 
 ##What is it?
 
-BrainFuzz is a brainf*** interpreter written in C# that supports serveral new extentions.
+BrainFuzz is a brainfuck interpreter written in C# that supports serveral new extentions.
 
-##A bit about brainf***
+##A bit about brainfuck
 
-Brainf*** is an esoteric programming language which consists of just 8 characters. It operates on an array of cells all initialized to 0 and a pointer.
+Brainfuck is an esoteric programming language which consists of just 8 characters. It operates on an array of cells all initialized to 0 and a pointer.
 
 Op | Function
 --- | ---
@@ -22,15 +22,15 @@ Op | Function
 
 ##BrainFuzz Extensions
 
-BrainFuzz adds the followind new commands:
+BrainFuzz adds the following new commands:
 
 Op | Function
 --- | ---
 \( | If cell at pointer is 0 jump to the corresponding ')'
-\) | Jump to point of '('
+\) | Jump to point for '('
 \! | Inverts if and while conditions, also inputs a string into cells if used before ' " '
-; | Reads a number from input and puts it's numerical value in cell at pointer
-\: | Outputs the current cells value as a number NOT ascii e.g. cell is 65, outputs 65 not 'A'
-" | Outputs everything up until corresponding ' " '
-\^ | Saves current cells value in a temp register
+; | Reads a number from input and puts its numerical value in cell at pointer
+\: | Outputs the current cell's value as a number NOT ascii e.g. cell is 65, outputs 65 not 'A'
+" | Outputs everything up until corresponding ' " '. Does not affect cells.
+\^ | Saves current cell's value in a temp register
 = | Current cell becomes the value in the temp register
