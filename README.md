@@ -1,13 +1,13 @@
 # BrainFuzz
-An extention to the brainfuck language.
+An extention to the [brainfuck](https://esolangs.org/wiki/Brainfuck) language.
 
 ##What is it?
 
-BrainFuzz is a brainfuck interpreter written in C# that supports serveral new extentions.
+BrainFuzz is a [brainfuck](https://esolangs.org/wiki/Brainfuck) interpreter written in C# that supports serveral new extentions.
 
 ##A bit about brainfuck
 
-Brainfuck is an esoteric programming language which consists of just 8 characters. It operates on an array of cells all initialized to 0 and a pointer.
+[Brainfuck](https://esolangs.org/wiki/Brainfuck) is an esoteric programming language which consists of just 8 characters. It operates on an array of cells all initialized to 0 and a pointer.
 
 Op | Function
 --- | ---
