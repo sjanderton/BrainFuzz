@@ -19,3 +19,18 @@ Op | Function
 \] | If cell at pointer's value is zero, continue to next instruction otherwise jump command after corresponding '['
 \. | Print value of cell at pointer as a character
 , | Read in a character to the cell at pointer
+
+##BrainFuzz Extensions
+
+BrainFuzz adds the followind new commands:
+
+Op | Function
+--- | ---
+\( | if cell at pointer is 0 jump to the corresponding ')'
+\) | Jump to point of '('
+\! | inverts if and while conditions, also inputs a string into cells if used before ' " '
+\; | reads a number from input and puts it's numerical value in cell at pointer
+\: | outputs the current cells value as a number NOT ascii e.g. cell is 65, outputs 65 not 'A'
+\" | outputs everything up until corresponding ' " '
+\^ | saves current cells value in a temp register
+\= | current cell becomes the value in the temp register
