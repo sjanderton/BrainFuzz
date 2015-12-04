@@ -26,11 +26,11 @@ BrainFuzz adds the followind new commands:
 
 Op | Function
 --- | ---
-\( | if cell at pointer is 0 jump to the corresponding ')'
+\( | If cell at pointer is 0 jump to the corresponding ')'
 \) | Jump to point of '('
-\! | inverts if and while conditions, also inputs a string into cells if used before ' " '
-\; | reads a number from input and puts it's numerical value in cell at pointer
-\: | outputs the current cells value as a number NOT ascii e.g. cell is 65, outputs 65 not 'A'
-\" | outputs everything up until corresponding ' " '
-\^ | saves current cells value in a temp register
-\= | current cell becomes the value in the temp register
+\! | Inverts if and while conditions, also inputs a string into cells if used before ' " '
+; | Reads a number from input and puts it's numerical value in cell at pointer
+\: | Outputs the current cells value as a number NOT ascii e.g. cell is 65, outputs 65 not 'A'
+" | Outputs everything up until corresponding ' " '
+\^ | Saves current cells value in a temp register
+= | Current cell becomes the value in the temp register
