@@ -211,7 +211,15 @@ namespace BrainFuzzInterpreter
                     string word = "";
                     while (pc < prog.Length && prog[pc] != '"')
                     {
-                        word += prog[pc++];
+                        if (prog[pc] == '\\' && pc + 1 < prog.Length && prog[pc + 1] == '"')
+                        {
+                            word += @"\"""; //consume \" as well!!!
+                            pc += 2;
+                        }
+                        else
+                        {
+                            word += prog[pc++];
+                        }
                     }
                     word = Regex.Unescape(word);
                     if (!inverNext)
@@ -277,6 +285,11 @@ namespace BrainFuzzInterpreter
                         {
                             if (!char.IsControl(program[i]))
                             {
+                                if (program[i] == '\\' && (i+1) < program.Length && program[i+1] == '"') //don't forget to ignore \"
+                                {
+                                    word += program[i];
+                                    i++;
+                                }
                                 word += program[i];
                             }
                             i++;
